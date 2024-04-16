@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auction Smart Contract Interface</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: black;
+        color: white;
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background: #333;
+    }
+    .info, .logs {
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #444;
+        border-radius: 5px;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: gold;
+        color: black;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        opacity: 0.8;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <center> 
+        <h1>NFT Auction Interface</h1>
+    </center>
+    
+    <div class="info">
+        <p>Minimum Bid: <span id="minimumBid">0.1 ETH</span></p>
+    </div>
+    <button type="button" onclick="placeBid()">Place Bid</button>
+    <button type="button" onclick="endAuction()">End Auction</button>
+    <div class="logs">
+        <h3>Event Log</h3>
+        <ul id="eventLog">
+            <!-- Logs will be appended here -->
+        </ul>
+    </div>
+</div>
+
+<script>
+    function endAuction() {
+        console.log('Auction ended.');
+        appendLog('Auction ended.');
+        // Add Ethereum interaction code here
+    }
+
+    function appendLog(message) {
+        const log = document.createElement('li');
+        log.textContent = message;
+        document.getElementById('eventLog').appendChild(log);
+    }
+</script>
+</body>
+</html>
