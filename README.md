@@ -1,13 +1,29 @@
-# Sample Hardhat Project
+# Auction Smart Contract
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+This project is a blockchain-based auction system implemented with Solidity. It features an `Auction` smart contract that allows users to place bids on items and settles the highest bid after a predetermined time.
 
-Try running some of the following tasks:
+## Features
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
-```
+- `Auction` contract with bidding and auction settlement functionality.
+- Integration with OpenZeppelin's library for robust, secure contract development.
+- Time-bound auction process with minimum bid requirements.
+- Event emission for bid placement and auction settlement.
+
+## Smart Contract
+
+`Auction.sol` is the main contract that handles the auction logic. It includes functions to place bids, and settle the auction, and ensures that bids are higher than the minimum and only accepted within the auction timeframe.
+
+## Getting Started
+
+To deploy and interact with the smart contract, follow these steps:
+
+### Prerequisites
+- Node.js
+- NPM
+- Truffle Suite (optional)
+
+### Installation
+1. Clone the repository:
+```sh
+git clone https://github.com/your-repository.git
+cd your-repository
